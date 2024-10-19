@@ -11041,3 +11041,224 @@ Processing by Devise::RegistrationsController#new as HTML
 Completed 200 OK in 30ms (Views: 18.1ms | ActiveRecord: 0.9ms | Allocations: 13869)
 
 
+Started GET "/" for ::1 at 2024-10-17 18:03:55 +0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by FriendsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering friends/index.html.erb within layouts/application
+  Rendered friends/index.html.erb within layouts/application (Duration: 11.8ms | Allocations: 1218)
+Importmap skipped missing path: friends_search.js
+  Rendered home/_header.html.erb (Duration: 1.2ms | Allocations: 525)
+  Rendered layout layouts/application.html.erb (Duration: 83.0ms | Allocations: 39994)
+Completed 200 OK in 103ms (Views: 87.1ms | ActiveRecord: 0.0ms | Allocations: 45337)
+
+
+Started GET "/users/sign_in" for ::1 at 2024-10-17 18:03:59 +0500
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.6ms | Allocations: 747)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 12.3ms | Allocations: 4102)
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 240)
+  Rendered layout layouts/application.html.erb (Duration: 16.5ms | Allocations: 6931)
+Completed 200 OK in 30ms (Views: 18.4ms | ActiveRecord: 0.7ms | Allocations: 14027)
+
+
+Started POST "/users/sign_in" for ::1 at 2024-10-17 18:04:05 +0500
+Processing by Devise::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"sameershazad501@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "sameershazad501@gmail.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 260ms (ActiveRecord: 0.6ms | Allocations: 5783)
+
+
+Started GET "/" for ::1 at 2024-10-17 18:04:06 +0500
+Processing by FriendsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering friends/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/friends/index.html.erb:2
+  [1m[36mFriend Load (0.4ms)[0m  [1m[34mSELECT "friends".* FROM "friends"[0m
+  ↳ app/views/friends/index.html.erb:16
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/friends/index.html.erb:17
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/friends/index.html.erb:17
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/friends/index.html.erb:17
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/friends/index.html.erb:17
+  Rendered friends/index.html.erb within layouts/application (Duration: 37.4ms | Allocations: 11734)
+  Rendered home/_header.html.erb (Duration: 0.6ms | Allocations: 395)
+  Rendered layouts/_alerts.html.erb (Duration: 0.7ms | Allocations: 157)
+  Rendered layout layouts/application.html.erb (Duration: 43.2ms | Allocations: 15016)
+Completed 200 OK in 45ms (Views: 42.2ms | ActiveRecord: 1.8ms | Allocations: 15399)
+
+
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mFriend Load (0.2ms)[0m  [1m[34mSELECT "friends".* FROM "friends"[0m
+Started GET "/" for ::1 at 2024-10-19 00:39:57 +0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by FriendsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering friends/index.html.erb within layouts/application
+  Rendered friends/index.html.erb within layouts/application (Duration: 19.5ms | Allocations: 1218)
+Importmap skipped missing path: friends_search.js
+  Rendered home/_header.html.erb (Duration: 2.5ms | Allocations: 525)
+  Rendered layout layouts/application.html.erb (Duration: 143.6ms | Allocations: 39598)
+Completed 200 OK in 181ms (Views: 151.4ms | ActiveRecord: 0.0ms | Allocations: 44920)
+
+
+Started GET "/home/about" for 172.18.0.1 at 2024-10-19 06:32:41 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/about.html.erb within layouts/application
+  Rendered home/about.html.erb within layouts/application (Duration: 4.7ms | Allocations: 452)
+Importmap skipped missing path: friends_search.js
+  Rendered home/_header.html.erb (Duration: 8.0ms | Allocations: 770)
+  Rendered layout layouts/application.html.erb (Duration: 701.6ms | Allocations: 93722)
+Completed 200 OK in 778ms (Views: 720.0ms | ActiveRecord: 0.0ms | Allocations: 101247)
+
+
+Started GET "/home/about" for 172.18.0.1 at 2024-10-19 06:33:07 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/about.html.erb within layouts/application
+  Rendered home/about.html.erb within layouts/application (Duration: 7.4ms | Allocations: 151)
+  Rendered home/_header.html.erb (Duration: 1.8ms | Allocations: 604)
+  Rendered layout layouts/application.html.erb (Duration: 44.8ms | Allocations: 3796)
+Completed 200 OK in 65ms (Views: 52.4ms | ActiveRecord: 0.0ms | Allocations: 4713)
+
+
+Started GET "/home/about" for 172.18.0.1 at 2024-10-19 06:33:28 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/about.html.erb within layouts/application
+  Rendered home/about.html.erb within layouts/application (Duration: 1.0ms | Allocations: 150)
+  Rendered home/_header.html.erb (Duration: 8.6ms | Allocations: 604)
+  Rendered layout layouts/application.html.erb (Duration: 26.5ms | Allocations: 3797)
+Completed 200 OK in 30ms (Views: 29.2ms | ActiveRecord: 0.0ms | Allocations: 4707)
+
+
+Started GET "/home/about" for 172.18.0.1 at 2024-10-19 06:33:44 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/about.html.erb within layouts/application
+  Rendered home/about.html.erb within layouts/application (Duration: 2.2ms | Allocations: 150)
+  Rendered home/_header.html.erb (Duration: 3.2ms | Allocations: 604)
+  Rendered layout layouts/application.html.erb (Duration: 33.4ms | Allocations: 3806)
+Completed 200 OK in 45ms (Views: 43.0ms | ActiveRecord: 0.0ms | Allocations: 4709)
+
+
+Started GET "/home/about" for 172.18.0.1 at 2024-10-19 06:38:23 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/about.html.erb within layouts/application
+  Rendered home/about.html.erb within layouts/application (Duration: 3.8ms | Allocations: 344)
+Importmap skipped missing path: friends_search.js
+  Rendered home/_header.html.erb (Duration: 13.1ms | Allocations: 767)
+  Rendered layout layouts/application.html.erb (Duration: 252.0ms | Allocations: 37113)
+Completed 200 OK in 302ms (Views: 266.5ms | ActiveRecord: 0.0ms | Allocations: 41313)
+
+
+Started GET "/home/about" for 172.18.0.1 at 2024-10-19 06:38:40 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/about.html.erb within layouts/application
+  Rendered home/about.html.erb within layouts/application (Duration: 11.3ms | Allocations: 150)
+  Rendered home/_header.html.erb (Duration: 7.7ms | Allocations: 604)
+  Rendered layout layouts/application.html.erb (Duration: 54.7ms | Allocations: 3789)
+Completed 200 OK in 60ms (Views: 58.1ms | ActiveRecord: 0.0ms | Allocations: 4702)
+
+
+Started GET "/home/about" for 172.18.0.1 at 2024-10-19 06:48:51 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/about.html.erb within layouts/application
+  Rendered home/about.html.erb within layouts/application (Duration: 7.3ms | Allocations: 452)
+Importmap skipped missing path: friends_search.js
+  Rendered home/_header.html.erb (Duration: 5.2ms | Allocations: 770)
+  Rendered layout layouts/application.html.erb (Duration: 1650.1ms | Allocations: 48387)
+Completed 200 OK in 1892ms (Views: 1688.2ms | ActiveRecord: 0.0ms | Allocations: 55509)
+
+
+Started GET "/home/about" for 172.18.0.1 at 2024-10-19 06:49:18 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/about.html.erb within layouts/application
+  Rendered home/about.html.erb within layouts/application (Duration: 1.2ms | Allocations: 150)
+  Rendered home/_header.html.erb (Duration: 11.0ms | Allocations: 604)
+  Rendered layout layouts/application.html.erb (Duration: 37.1ms | Allocations: 3795)
+Completed 200 OK in 47ms (Views: 45.4ms | ActiveRecord: 0.0ms | Allocations: 4711)
+
+
+Started GET "/" for 172.18.0.1 at 2024-10-19 07:12:12 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by FriendsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering friends/index.html.erb within layouts/application
+  Rendered friends/index.html.erb within layouts/application (Duration: 14.8ms | Allocations: 1331)
+Importmap skipped missing path: friends_search.js
+  Rendered home/_header.html.erb (Duration: 2.2ms | Allocations: 525)
+  Rendered layout layouts/application.html.erb (Duration: 369.1ms | Allocations: 37467)
+Completed 200 OK in 454ms (Views: 382.1ms | ActiveRecord: 0.0ms | Allocations: 43148)
+
+
+Started GET "/" for 172.18.0.1 at 2024-10-19 07:26:40 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by FriendsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering friends/index.html.erb within layouts/application
+  Rendered friends/index.html.erb within layouts/application (Duration: 14.9ms | Allocations: 1316)
+Importmap skipped missing path: friends_search.js
+  Rendered home/_header.html.erb (Duration: 1.9ms | Allocations: 525)
+  Rendered layout layouts/application.html.erb (Duration: 278.5ms | Allocations: 37211)
+Completed 200 OK in 335ms (Views: 287.1ms | ActiveRecord: 0.0ms | Allocations: 42532)
+
+
+Started GET "/home/about" for 172.18.0.1 at 2024-10-19 07:27:01 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/about.html.erb within layouts/application
+  Rendered home/about.html.erb within layouts/application (Duration: 6.2ms | Allocations: 156)
+  Rendered home/_header.html.erb (Duration: 8.1ms | Allocations: 612)
+  Rendered layout layouts/application.html.erb (Duration: 31.1ms | Allocations: 3842)
+Completed 200 OK in 39ms (Views: 36.7ms | ActiveRecord: 0.0ms | Allocations: 4914)
+
+
+Started GET "/home/about" for 172.18.0.1 at 2024-10-19 07:27:24 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/about.html.erb within layouts/application
+  Rendered home/about.html.erb within layouts/application (Duration: 1.0ms | Allocations: 150)
+  Rendered home/_header.html.erb (Duration: 2.5ms | Allocations: 604)
+  Rendered layout layouts/application.html.erb (Duration: 20.8ms | Allocations: 3795)
+Completed 200 OK in 29ms (Views: 25.5ms | ActiveRecord: 0.0ms | Allocations: 4704)
+
+
+Started GET "/home/about" for 172.18.0.1 at 2024-10-19 07:27:37 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by HomeController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/about.html.erb within layouts/application
+  Rendered home/about.html.erb within layouts/application (Duration: 1.4ms | Allocations: 149)
+  Rendered home/_header.html.erb (Duration: 2.8ms | Allocations: 604)
+  Rendered layout layouts/application.html.erb (Duration: 33.4ms | Allocations: 3812)
+Completed 200 OK in 41ms (Views: 39.0ms | ActiveRecord: 0.0ms | Allocations: 4722)
+
+
