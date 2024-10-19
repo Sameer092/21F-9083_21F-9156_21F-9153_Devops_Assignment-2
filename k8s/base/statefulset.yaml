@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: rails-app
+spec:
+  serviceName: rails-app-service
+  replicas: 1
+  selector:
+    matchLabels:
+      app: rails-app
+  template:
+    metadata:
+      labels:
+        app: rails-app
+    spec:
+      containers:
+      - name: web
+        image: itssam509/my-rails-app:v0.1
+        ports:
+        - containerPort: 3000
+        env:
+        - name: RAILS_ENV
+          value: development
+        volumeMounts:
+        - name: sqlite-storage
+          mountPath: /app/db
+  volumeClaimTemplates:
+  - metadata:
+      name: sqlite-storage
+    spec:
+      accessModes: ["ReadWriteOnce"]
+      resources:
+        requests:
+          storage: 1Gi
