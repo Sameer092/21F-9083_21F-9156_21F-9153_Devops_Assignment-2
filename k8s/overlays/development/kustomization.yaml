@@ -1,0 +1,4 @@
+resources:
+- ../../base  # Points to the base directory where the core resources are stored
+
+

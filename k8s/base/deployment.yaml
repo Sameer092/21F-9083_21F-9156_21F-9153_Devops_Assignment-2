@@ -20,6 +20,11 @@ spec:
         env:
         - name: RAILS_ENV
           value: development
+        - name: DATABASE_PASSWORD  
+          valueFrom:
+            secretKeyRef:
+              name: rails-secret  
+              key: db-password    
         volumeMounts:
         - name: sqlite-storage
           mountPath: /app/db
