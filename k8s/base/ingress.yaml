@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: rails-app-ingress
+  annotations:
+    kubernetes.io/ingress.class: "nginx"  # Ensure it uses the nginx ingress
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: localhost  # This ensures it will work for localhost
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: rails-app-service
+            port:
+              number: 80
